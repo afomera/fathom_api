@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fathom_api (0.0.1)
+    fathom_api (0.0.1.1)
 
 GEM
   remote: https://rubygems.org/

@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Andrea Fomera"]
   spec.email         = ["afomera@hey.com"]
 
-  spec.summary       = "A gem for calling the Fathom API"
+  spec.summary       = "A gem for using the Fathom API"
   spec.homepage      = "https://github.com/afomera/fathom_api"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
