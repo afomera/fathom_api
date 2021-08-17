@@ -5,9 +5,11 @@ module Fathom
 
   # Resources (like high level API endpoints)
   autoload :AccountResource, "fathom/resources/account"
+  autoload :SitesResource, "fathom/resources/sites"
 
   # Objects we wrap the responses in
   autoload :Account, "fathom/objects/account"
+  autoload :Site, "fathom/objects/site"
 
   def self.api_key=(key)
     @api_key = key

@@ -13,6 +13,10 @@ module Fathom
       AccountResource.new(self)
     end
 
+    def sites
+      SitesResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix = BASE_URL
