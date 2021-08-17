@@ -24,6 +24,9 @@ jobs:
           bundler: default
           bundler-cache: true
 
+      - name: Install bunder
+        run: gem install bundler
+
       - name: StandardRb check
         run: bundle exec standardrb
 
