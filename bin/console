@@ -11,5 +11,7 @@ require "fathom_api"
 # require "pry"
 # Pry.start
 
+client = Fathom::Client.new(api_key: ENV['FATHOM_API_KEY'])
+
 require "irb"
 IRB.start(__FILE__)

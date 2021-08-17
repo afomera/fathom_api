@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/fathom_api/version"
+require_relative "lib/fathom/version"
 
 Gem::Specification.new do |spec|
   spec.name = "fathom_api"
-  spec.version = FathomApi::VERSION
+  spec.version = Fathom::VERSION
   spec.authors = ["Andrea Fomera"]
   spec.email = ["afomera@hey.com"]
 
@@ -26,9 +26,6 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
-
-  # For more information and examples about making a new gem, checkout our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_dependency "faraday", "~> 1.7"
+  spec.add_dependency "faraday_middleware", "~> 1.1"
 end

@@ -2,9 +2,9 @@
 
 require "test_helper"
 
-class FathomApiTest < Minitest::Test
+class FathomTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::FathomApi::VERSION
+    refute_nil ::Fathom::VERSION
   end
 
   def test_it_does_something_useful

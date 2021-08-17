@@ -17,6 +17,28 @@ bundle add fathom_api
 gem "fathom_api"
 ```
 
+## Usage
+
+```ruby
+client = Fathom::Client.new(api_key: ENV['FATHOM_API_KEY'])
+
+# Get account details
+client.account.info
+# => Fathom::Account
+```
+
+Responses are wrapped in an object that dynamically allows you to call the attributes as if they are an OpenStruct... IE
+
+```ruby
+response = client.account.info
+# => #<Fathom::Account:0x00007fee844068c8 @attributes=#<OpenStruct id=12345, name="Your account name", email="you@starfleet.org", object="account">>
+
+response.name
+# => "Your account name"
+response.email
+# => "you@starfleet.org"
+```
+
 ## 🙏 Contributing
 
 This project uses Standard for formatting Ruby code. Please make sure to run standardrb before submitting pull requests. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/afomera/fathom_api/blob/main/CODE_OF_CONDUCT.md).
