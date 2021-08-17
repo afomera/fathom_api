@@ -33,8 +33,6 @@ GEM
     standard (1.1.7)
       rubocop (= 1.18.4)
       rubocop-performance (= 1.11.4)
-    standardrb (1.0.0)
-      standard
     unicode-display_width (2.0.0)
 
 PLATFORMS
@@ -44,7 +42,7 @@ DEPENDENCIES
   fathom_api!
   minitest (~> 5.0)
   rake (~> 13.0)
-  standardrb (~> 1.0)
+  standard
 
 BUNDLED WITH
    2.2.3

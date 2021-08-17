@@ -9,4 +9,4 @@ gem "rake", "~> 13.0"
 
 gem "minitest", "~> 5.0"
 
-gem "standardrb", "~> 1.0"
+gem "standard"
