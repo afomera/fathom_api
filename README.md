@@ -1,45 +1,30 @@
-# FathomApi
-
 ### Hello there! This gem is a placeholder and will be updated and working soon. Please do not install it yet.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fathom_api`. To experiment with that code, run `bin/console` for an interactive prompt.
+# Fathom API
 
-TODO: Delete this and the text above, and describe your gem
+### 🛠 An easy to use client with the Fathom API
+
+[![Build Status](https://github.com/afomera/fathom_api/workflows/Tests/badge.svg)](https://github.com/afomera/fathom_api/actions) [![Gem Version](https://badge.fury.io/rb/fathom_api.svg)](https://badge.fury.io/rb/fathom_api)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add `fathom_api` to your application's Gemfile:
 
-```ruby
-gem 'fathom_api'
+```bash
+bundle add fathom_api
+
+# OR in the Gemfile
+gem "fathom_api"
 ```
 
-And then execute:
+## 🙏 Contributing
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install fathom_api
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/fathom_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/fathom_api/blob/master/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+This project uses Standard for formatting Ruby code. Please make sure to run standardrb before submitting pull requests. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/afomera/fathom_api/blob/main/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
-Everyone interacting in the FathomApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/fathom_api/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the FathomApi project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/afomera/fathom_api/blob/main/CODE_OF_CONDUCT.md).
+
+## 📝 License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
