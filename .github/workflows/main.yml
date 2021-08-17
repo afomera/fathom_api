@@ -1,27 +1,26 @@
 name: Tests
+on: [push, pull_request]
 
-on: [push,pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: ["2.7", "3.0"]
 
- jobs:
-   tests:
-     runs-on: ubuntu-latest
-     strategy:
-       matrix:
-         ruby: ["2.7", "3.0"]
+    steps:
+      - uses: actions/checkout@main
 
-     steps:
-       - uses: actions/checkout@main
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler: default
+          bundler-cache: true
 
-       - name: Set up Ruby
-         uses: ruby/setup-ruby@v1
-         with:
-           ruby-version: ${{ matrix.ruby }}
-           bundler: default
-           bundler-cache: true
+      - name: StandardRb check
+        run: bundle exec standardrb
 
-       - name: StandardRb check
-         run: bundle exec standardrb
-
-       - name: Run tests
-         run: |
-           bundle exec rake test
+      - name: Run tests
+        run: |
+          bundle exec rake test
