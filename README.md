@@ -4,6 +4,10 @@
 
 ### 🛠 An easy to use client with the Fathom API
 
+You'll need a usefathom.com account to use the API, if you don't have one [click here to sign up](https://usefathom.com/ref/CVNWHD).
+
+As of August 17th, 2021 the API was still early-access, so some endpoints may be different than in production. Feel free to submit a PR or issue. Contributions are welcome!
+
 [![Build Status](https://github.com/afomera/fathom_api/workflows/Tests/badge.svg)](https://github.com/afomera/fathom_api/actions) [![Gem Version](https://badge.fury.io/rb/fathom_api.svg)](https://badge.fury.io/rb/fathom_api)
 
 ## Installation
@@ -19,9 +23,15 @@ gem "fathom_api"
 
 ## Usage
 
+Create a client to get started, passing an `api_key` you generate in your Fathom API settings.
+
 ```ruby
 client = Fathom::Client.new(api_key: ENV['FATHOM_API_KEY'])
+```
 
+### Fetch account details
+
+```ruby
 # Get account details
 client.account.info
 # => Fathom::Account
@@ -39,6 +49,16 @@ response.email
 # => "you@starfleet.org"
 ```
 
+### Sites
+
+```ruby
+client.sites.list
+
+# Optionally, pass params in to filter / limit responses
+# Limit can be between 1 and 100
+client.sites.list(limit: 1, starting_after: "SITE_ID")
+```
+
 ## 🙏 Contributing
 
 This project uses Standard for formatting Ruby code. Please make sure to run standardrb before submitting pull requests. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/afomera/fathom_api/blob/main/CODE_OF_CONDUCT.md).
@@ -50,3 +70,7 @@ Everyone interacting in the FathomApi project's codebases, issue trackers, chat 
 ## 📝 License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+```
+
+```
