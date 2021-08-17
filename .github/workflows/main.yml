@@ -21,11 +21,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-          bundler: default
           bundler-cache: true
-
-      - name: Install bunder
-        run: gem install bundler
 
       - name: StandardRb check
         run: bundle exec standardrb
