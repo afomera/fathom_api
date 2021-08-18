@@ -1,5 +1,3 @@
-### Hello there! This gem is a placeholder and will be updated and working soon. Please do not install it yet.
-
 # Fathom API
 
 ### 🛠 An easy to use client with the Fathom API
