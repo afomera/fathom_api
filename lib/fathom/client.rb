@@ -13,12 +13,20 @@ module Fathom
       AccountResource.new(self)
     end
 
-    def sites
-      SitesResource.new(self)
+    def aggregations
+      AggregationsResource.new(self)
+    end
+
+    def current_visitors
+      CurrentVisitorsResource.new(self)
     end
 
     def events
       EventsResource.new(self)
+    end
+
+    def sites
+      SitesResource.new(self)
     end
 
     def connection
