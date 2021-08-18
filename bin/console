@@ -13,5 +13,7 @@ require "fathom_api"
 
 client = Fathom::Client.new(api_key: ENV['FATHOM_API_KEY'])
 
+
+puts "`client` is now set with the api_key equal to ENV['FATHOM_API_KEY']"
 require "irb"
 IRB.start(__FILE__)

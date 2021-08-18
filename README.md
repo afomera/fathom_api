@@ -57,6 +57,25 @@ client.sites.list
 # Optionally, pass params in to filter / limit responses
 # Limit can be between 1 and 100
 client.sites.list(limit: 1, starting_after: "SITE_ID")
+
+client.sites.retrieve(site_id: site_id)
+client.sites.create(site_id: site_id)
+client.sites.delete(site_id: site_id)
+client.sites.wipe(site_id: site_id)
+```
+
+### Events
+
+```ruby
+client.events.list(site_id: site_id)
+# Optionally, pass params in to filter / limit responses
+# Limit can be between 1 and 100
+client.events.list(site_id: site_id, limit: 10, starting_after: "EVENT_ID")
+
+client.events.retrieve(site_id: site_id, event_id: event_id)
+client.events.create(site_id: site_id, **params)
+client.events.delete(site_id: site_id, event_id: event_id)
+client.events.wipe(site_id: site_id, event_id: event_id)
 ```
 
 ## 🙏 Contributing
@@ -70,7 +89,3 @@ Everyone interacting in the FathomApi project's codebases, issue trackers, chat 
 ## 📝 License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-```
-
-```

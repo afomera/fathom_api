@@ -17,6 +17,10 @@ module Fathom
       SitesResource.new(self)
     end
 
+    def events
+      EventsResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix = BASE_URL
