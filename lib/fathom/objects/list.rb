@@ -11,11 +11,11 @@ module Fathom
       @attributes["has_more"]
     end
 
-    def next_page
+    def last_id
       @attributes["data"].last.id
     end
 
-    def prev_page
+    def first_id
       @attributes["data"].first.id
     end
   end

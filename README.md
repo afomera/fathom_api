@@ -47,21 +47,24 @@ response.email
 # => "you@starfleet.org"
 ```
 
-### A note on Fathom::List objects
+### Pagination
 
 When an API's response comes back with a object of "list", we automatically wrap that to attempt to provide some helper methods to ease your implementations.
 
 ```ruby
-list = client.sites.list
+list = client.sites.list(limit: 1)
 # => Fathom::List
 
-# get the cursor you can pass to the next request's starting_after param
-list.next_page
-# or get the ending_before param's cursor
-list.prev_page
+# We provide two helper methods to allow you to get the first or last id from the data response
+list.first_id
+list.last_id
 
 # check if the list has more after it with
 list.has_more?
+# => true
+
+# use the next page cursor in your next response
+list2 = client.sites.list(limit: 1, starting_after: list.last_id)
 ```
 
 ### Sites

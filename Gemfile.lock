@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fathom_api (0.1.0)
+    fathom_api (0.1.1)
       faraday (~> 1.7)
       faraday_middleware (~> 1.1)
 
