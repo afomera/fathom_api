@@ -48,7 +48,7 @@ module Fathom
         raise Error, "We were unable to perform the request due to server-side problems. #{response.body}"
       end
 
-      response
+      Fathom.build_object(response.body)
     end
   end
 end

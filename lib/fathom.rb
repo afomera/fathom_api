@@ -14,8 +14,15 @@ module Fathom
 
   # Objects we wrap the responses in
   autoload :Account, "fathom/objects/account"
+  autoload :Event, "fathom/objects/event"
+  autoload :List, "fathom/objects/list"
   autoload :Site, "fathom/objects/site"
 
   class Error < StandardError; end
-  # Your code goes here...
+
+  def self.build_object(data)
+    type = data.fetch("object", "object")
+    class_name = type.split("_").map(&:capitalize).join
+    Fathom.const_get(class_name).new(data)
+  end
 end
