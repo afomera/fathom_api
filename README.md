@@ -116,6 +116,8 @@ client.current_visitors(site_id: site_id, {}) # Can add detailed: true for a mor
 client.aggregations.list(entity_id: entity_id, entity: entity, aggregates: aggregates, **params)
 ```
 
+You can find all the available parameters in the [official Fathom docs](https://usefathom.com/api#introduction)
+
 ## 🙏 Contributing
 
 This project uses Standard for formatting Ruby code. Please make sure to run standardrb before submitting pull requests. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/afomera/fathom_api/blob/main/CODE_OF_CONDUCT.md).
