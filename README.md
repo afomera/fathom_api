@@ -113,8 +113,10 @@ client.current_visitors(site_id: site_id, {}) # Can add detailed: true for a mor
 ### Aggregation
 
 ```ruby
-client.aggregations.list(entity_id: entity_id, entity_type: entity_type, aggregates: aggregates, **params)
+client.aggregations.list(entity_id: entity_id, entity: entity, aggregates: aggregates, **params)
 ```
+
+You can find all the available parameters in the [official Fathom docs](https://usefathom.com/api#introduction)
 
 ## 🙏 Contributing
 
