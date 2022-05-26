@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2022-05-26
+
 ### Changed
 
 - Update the Aggregations endpoint to automatically call `.to_json` when using Filters if needed. Thanks @joemasilotti!
